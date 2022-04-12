@@ -1,0 +1,16 @@
+PODS:
+  - DYWave (0.1.0)
+
+DEPENDENCIES:
+  - DYWave (from `../`)
+
+EXTERNAL SOURCES:
+  DYWave:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DYWave: bf4ea2352c08ac9f55fbdf9f61bd6bc4a3ace7e7
+
+PODFILE CHECKSUM: 23633d212a21e28e357c62a1acbeb5f343dde93c
+
+COCOAPODS: 1.11.2

@@ -1,0 +1,22 @@
+{
+  "name": "DYWave",
+  "version": "0.1.0",
+  "summary": "A short description of DYWave.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ekdus0227@gmail.com/DYWave",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ekdus0227@gmail.com": "ekdus0227@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/ekdus0227@gmail.com/DYWave.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "DYWave/Classes/**/*"
+}

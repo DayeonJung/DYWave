@@ -1,0 +1,6 @@
+framework module Pods_DYWave_Example {
+  umbrella header "Pods-DYWave_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

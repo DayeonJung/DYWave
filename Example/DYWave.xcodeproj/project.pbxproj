@@ -42,11 +42,11 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6B1545C7CCDE0F8280F25A3B /* Pods-DYWave_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYWave_Example.debug.xcconfig"; path = "Target Support Files/Pods-DYWave_Example/Pods-DYWave_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C4D108643682A3D96EE6E29C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C4D108643682A3D96EE6E29C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D8F44AEFF817EBCB6DF7D7AF /* Pods-DYWave_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYWave_Example.release.xcconfig"; path = "Target Support Files/Pods-DYWave_Example/Pods-DYWave_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DE8D539EEF3E5FA7137AE3B2 /* Pods-DYWave_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYWave_Tests.release.xcconfig"; path = "Target Support Files/Pods-DYWave_Tests/Pods-DYWave_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		EFC5895A0112766226039B7F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F309A802369EB8ED58B4A9C0 /* DYWave.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = DYWave.podspec; path = ../DYWave.podspec; sourceTree = "<group>"; };
+		EFC5895A0112766226039B7F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F309A802369EB8ED58B4A9C0 /* DYWave.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DYWave.podspec; path = ../DYWave.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,6 @@
 				4ED6E6E4F8458B302D230065 /* Pods-DYWave_Tests.debug.xcconfig */,
 				DE8D539EEF3E5FA7137AE3B2 /* Pods-DYWave_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -484,7 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -499,7 +499,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
