@@ -23,10 +23,27 @@ class ViewController: UIViewController {
                 height: UIScreen.main.bounds.height
             ),
             bgColor: .lightGray,
-            maxTime: 3
+            maxTime: 3,
+            zeroYPoint: 0
         )
-        
         self.view.insertSubview(self.waveView, at: 0)
+        
+        let button = UIButton()
+        button.backgroundColor = .darkGray
+        self.view.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20).isActive = true
+        button.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
+        button.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        button.addTarget(self, action: #selector(didTap(sender:)), for: .touchUpInside)
+    }
+    
+    @objc func didTap(sender: UIButton) {
+        let state = sender.isSelected
+        waveView.shouldStop = !state
+        sender.isSelected = !state
+        
     }
 
     override func didReceiveMemoryWarning() {

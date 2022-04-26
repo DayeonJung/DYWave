@@ -11,7 +11,7 @@ struct WavePoints {
     private let width: CGFloat
     private let height: CGFloat
     
-    private var zeroYPoint: CGFloat         // 줄어드는 물결의 기준 y좌표
+    private var zeroYPoint: CGFloat         // 줄어드는 물결의 시작 y좌표
     private var heightPeriod: Double        // drawPeriod동안 내려갈 wave의 길이
     private let amplitude: CGFloat          // 위아래로 얼만큼 출렁일 것인가(0.0 ~ 1.0)
     

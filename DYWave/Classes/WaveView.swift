@@ -26,6 +26,13 @@ public class WaveView: UIView {
     private var drawPeriod: Double = 0.004  // Layer를 몇초에 한 번 랜더링할 것인가
     private var timer = Timer()
     
+    public var shouldStop: Bool = false {
+        didSet {
+            if self.shouldStop { self.stopAnimation() }
+            else { self.startAnimation() }
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         fatalError("Interface Builder로 WaveView를 만들 수 없습니다.")
@@ -34,23 +41,25 @@ public class WaveView: UIView {
     required public init(
         frame: CGRect,
         bgColor: UIColor,
-        maxTime: Int
+        maxTime: Int,
+        zeroYPoint: CGFloat
     ) {
         super.init(frame: frame)
         self.commoninit(
             maxTime: maxTime,
-            backgroundColor: bgColor
+            backgroundColor: bgColor,
+            zeroYPoint: zeroYPoint
         )
     }
     
     private func commoninit(
         maxTime: Int,
-        backgroundColor: UIColor
+        backgroundColor: UIColor,
+        zeroYPoint: CGFloat
     ) {
         let width = self.frame.width
         let height = self.frame.height
         let amplitude = 0.5
-        let zeroYPoint = 0.0
         let heightPeriod = Double(height)/(Double(maxTime)/self.drawPeriod)
         
         self.frontPoints = WavePoints(
@@ -90,6 +99,10 @@ public class WaveView: UIView {
             userInfo: nil,
             repeats: true
         )
+    }
+    
+    private func stopAnimation() {
+        self.timer.invalidate()
     }
     
     @objc private func waveAnimation() {
