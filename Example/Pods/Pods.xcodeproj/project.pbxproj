@@ -15,7 +15,7 @@
 		6301FA1E71831E1798B621F82C74BD0A /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E627D8801DC58E988257D18D550BF62 /* WaveView.swift */; };
 		66474E0C0B342E230760DA09773823DA /* Pods-DYWave_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4595DAAF7071495B16742BB028DB65 /* Pods-DYWave_Example-dummy.m */; };
 		8D4D851D330DFBEBEF0B6FD5403E96B4 /* DYWave-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB995337651A017A2583B0FB499DD89 /* DYWave-dummy.m */; };
-		9BA9E9B8281690FE00518647 /* WavePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA9E9B7281690FE00518647 /* WavePoints.swift */; };
+		9BB183F52818C97A0043699F /* WavePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB183F42818C97A0043699F /* WavePoints.swift */; };
 		CF1CA4CCD84DCD46FEA3768183CC8D86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		EC21F090827DC7609B8ADF1A7B90675B /* Pods-DYWave_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1971F4A2DF6C792A59FF3D570CD90F6 /* Pods-DYWave_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -62,7 +62,7 @@
 		94535885EB913279D30402BC6F7E7330 /* Pods-DYWave_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DYWave_Tests-Info.plist"; sourceTree = "<group>"; };
 		96FF0EBD3D7ADFEBFADB20FD663563C3 /* DYWave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DYWave.release.xcconfig; sourceTree = "<group>"; };
 		9933EB1696AD3D9957F06819D8345B36 /* Pods-DYWave_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DYWave_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9BA9E9B7281690FE00518647 /* WavePoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavePoints.swift; sourceTree = "<group>"; };
+		9BB183F42818C97A0043699F /* WavePoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WavePoints.swift; path = DYWave/Classes/WavePoints.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AB94FC7821A999B86A281655782F66AF /* Pods-DYWave_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DYWave_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B1971F4A2DF6C792A59FF3D570CD90F6 /* Pods-DYWave_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DYWave_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -192,8 +192,8 @@
 		F24A1D424AD20C5762D3C5660B9B2950 /* DYWave */ = {
 			isa = PBXGroup;
 			children = (
+				9BB183F42818C97A0043699F /* WavePoints.swift */,
 				4E627D8801DC58E988257D18D550BF62 /* WaveView.swift */,
-				9BA9E9B7281690FE00518647 /* WavePoints.swift */,
 				F4748D32B15598B637CCC46217741548 /* Pod */,
 				F98E85C6D26615AC00E1924548FB65A5 /* Support Files */,
 			);
@@ -370,9 +370,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BA9E9B8281690FE00518647 /* WavePoints.swift in Sources */,
 				8D4D851D330DFBEBEF0B6FD5403E96B4 /* DYWave-dummy.m in Sources */,
 				6301FA1E71831E1798B621F82C74BD0A /* WaveView.swift in Sources */,
+				9BB183F52818C97A0043699F /* WavePoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
