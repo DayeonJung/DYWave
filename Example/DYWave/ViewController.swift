@@ -20,11 +20,20 @@ class ViewController: UIViewController {
         return button
     }()
     
+    var resetButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("reset", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .darkGray
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setWaveView()
         self.setStartPauseButtonUI()
+        self.setResetButtonUI()
     }
     
     private func setWaveView() {
@@ -47,16 +56,30 @@ class ViewController: UIViewController {
         startPauseButton.translatesAutoresizingMaskIntoConstraints = false
         startPauseButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 40).isActive = true
         startPauseButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
-        startPauseButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -200).isActive = true
+        startPauseButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
         startPauseButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        startPauseButton.addTarget(self, action: #selector(didTap(sender:)), for: .touchUpInside)
+        startPauseButton.addTarget(self, action: #selector(didTapStartPauseButton(sender:)), for: .touchUpInside)
     }
     
-    @objc func didTap(sender: UIButton) {
+    private func setResetButtonUI() {
+        self.view.addSubview(resetButton)
+        resetButton.translatesAutoresizingMaskIntoConstraints = false
+        resetButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 40).isActive = true
+        resetButton.leadingAnchor.constraint(equalTo: self.startPauseButton.trailingAnchor, constant: 20).isActive = true
+        resetButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        resetButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        resetButton.addTarget(self, action: #selector(didTapResetButton(sender:)), for: .touchUpInside)
+    }
+    
+    @objc func didTapStartPauseButton(sender: UIButton) {
         let state = sender.isSelected
         waveView.shouldStop = !state
         sender.isSelected = !state
         
+    }
+    
+    @objc func didTapResetButton(sender: UIButton) {
+        waveView.resetComponents(backgroundColor: .blue)
     }
 
     override func didReceiveMemoryWarning() {
