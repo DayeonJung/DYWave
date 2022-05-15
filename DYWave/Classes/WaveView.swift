@@ -108,4 +108,12 @@ public class WaveView: UIView {
     @objc private func waveAnimation() {
         self.setNeedsDisplay()
     }
+    public func resetComponents(backgroundColor: UIColor?) {
+        self.frontPoints.setPointsToDraw(delay: 0)
+        self.backPoints.setPointsToDraw(delay: delayBetweenFrontAndBackPoints)
+        if let bgColorToChange = backgroundColor {
+            self.setLayersBackgroundColor(with: bgColorToChange)
+        }
+        setNeedsDisplay()
+    }
 }
