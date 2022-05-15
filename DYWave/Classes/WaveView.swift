@@ -24,6 +24,7 @@ public class WaveView: UIView {
     }
     
     private var drawPeriod: Double = 0.004  // Layer를 몇초에 한 번 랜더링할 것인가
+    private var delayBetweenFrontAndBackPoints: CGFloat = 2 * .pi/4
     private var timer = Timer()
     
     public var shouldStop: Bool = false {
@@ -69,7 +70,6 @@ public class WaveView: UIView {
             amplitude: amplitude,
             zeroYPoint: zeroYPoint
         )
-        self.frontWaveLayer.fillColor = backgroundColor.cgColor
         self.layer.addSublayer(self.frontWaveLayer)
         
         self.backPoints = WavePoints(
@@ -78,11 +78,11 @@ public class WaveView: UIView {
             heightPeriod: heightPeriod,
             amplitude: amplitude,
             zeroYPoint: zeroYPoint,
-            delay: 2 * .pi/4
+            delay: delayBetweenFrontAndBackPoints
         )
-        self.backWaveLayer.fillColor = backgroundColor.withAlphaComponent(0.5).cgColor
         self.layer.insertSublayer(self.backWaveLayer, at: 0)
 
+        self.setLayersBackgroundColor(with: backgroundColor)
         self.startAnimation()
     }
     
@@ -108,6 +108,12 @@ public class WaveView: UIView {
     @objc private func waveAnimation() {
         self.setNeedsDisplay()
     }
+    
+    private func setLayersBackgroundColor(with backgroundColor: UIColor) {
+        self.frontWaveLayer.fillColor = backgroundColor.cgColor
+        self.backWaveLayer.fillColor = backgroundColor.withAlphaComponent(0.5).cgColor
+    }
+    
     public func resetComponents(backgroundColor: UIColor?) {
         self.frontPoints.setPointsToDraw(delay: 0)
         self.backPoints.setPointsToDraw(delay: delayBetweenFrontAndBackPoints)

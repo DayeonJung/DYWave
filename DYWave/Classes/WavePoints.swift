@@ -30,6 +30,10 @@ struct WavePoints {
         self.heightPeriod = heightPeriod
         self.amplitude = amplitude
         self.zeroYPoint = zeroYPoint
+        setPointsToDraw(delay: delay)
+    }
+    
+    mutating func setPointsToDraw(delay: CGFloat) {
         self.points = makePointsToDraw(delay: delay)
     }
     
