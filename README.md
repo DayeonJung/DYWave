@@ -31,7 +31,7 @@ let waveView = WaveView(
 ```
 waveView.shouldStop = true
 ```
-* You can reset the WaveView. If you set the backgroundColor paremeter, The background color of WaveView will be changed.
+* You can reset the WaveView. If you set the backgroundColor parameter, the background color of WaveView will be changed.
 ```
 waveView.resetComponents(backgroundColor: nil)
 ```
